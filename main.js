@@ -72,7 +72,7 @@ function key(event) {
                 bullet_x += bullet_speed;
             }
         }
-        setInterval(bullet_move, 10)
+        setInterval(bullet_move, 10)                          
     }
 }
 
@@ -101,15 +101,23 @@ function drawtank() {
     } else if (tank_move_right) {
         tank = tank_right;
     }
-
+    
     if (tank_move_up) {
-        tank_y -= tank_speed;
+        if (tank_y > 0) {
+            tank_y -= tank_speed;
+        }
     } else if (tank_move_down) {
-        tank_y += tank_speed;
+        if (tank_y + tank_size < canvas.height) {
+            tank_y += tank_speed;
+        }
     } else if (tank_move_right) {
-        tank_x += tank_speed;
+        if (tank_x + tank_size < canvas.width) {
+            tank_x += tank_speed;
+        }
     } else if (tank_move_left) {
-        tank_x -= tank_speed;
+        if (tank_x > 0) {
+            tank_x -= tank_speed;
+        }
     }
 }
 
