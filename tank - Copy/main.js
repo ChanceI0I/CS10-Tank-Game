@@ -37,6 +37,9 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawtank();
     locate_muzzle();
+
+    
+    // enemy_tank_move();
     requestAnimationFrame(draw);
 }
 requestAnimationFrame(draw);
