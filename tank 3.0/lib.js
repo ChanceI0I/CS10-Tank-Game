@@ -128,8 +128,8 @@ const tank = {
 
     size : 35,
     speed : 2,
-    x : 20,
-    y : 20,
+    x : 50,
+    y : 50,
     muzzle_x : 0,
     muzzle_y : 0,
 }
@@ -172,7 +172,6 @@ const enemy_tank = {
     muzzle_x : 0,
     muzzle_y : 0,
 
-    // fire_time : 2000,
 }
 
 const dead_img = {
@@ -249,7 +248,7 @@ const score = {
     x : 600,
     y : 30,
 }
-// -----------------------------------------------------------enemy----------------------------------------------------------
+
 function choose_direction() {
     let num = Math.random();
 
@@ -605,7 +604,8 @@ function draw_loading_bar() {
         loading_bar_inside.style = "red"
         ctx.fillStyle = loading_bar_inside.style;
         ctx.fillRect(loading_bar_inside.x, loading_bar_inside.y, loading_bar_inside.width, loading_bar_inside.height);
-        loading_bar_inside.width += 0.317;
+        // loading_bar_inside.width += 0.317; //60 Hertz
+        loading_bar_inside.width += 0.26; //75 Hertz
     } else if (bullet_in_air === false){
         loading_bar_inside.style = "rgb(111, 228, 76)";
         loading_bar_inside.width = loading_bar.width - loading_bar.line_width * 2;

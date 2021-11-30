@@ -55,7 +55,7 @@ function draw() {
 
     if (alive) {
         if (bullet.amount === 0) {
-            // console.log("MISSION FAILED")
+            console.log("MISSION FAILED")
         }
         draw_enemy_tank(); 
         enemy_tank_fire();
@@ -85,8 +85,6 @@ function draw() {
     if (alive === false) {
         setTimeout(enemy_new, 1500)
     }
-    // console.log(enemy_bullet.damage)
-    // console.log(bullet.damage)
 
     requestAnimationFrame(draw);
 }
