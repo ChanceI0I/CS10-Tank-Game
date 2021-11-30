@@ -1,4 +1,4 @@
-//Due to the different screen refresh rate, you may need to change the number in line 609/610;
+//Due to the different screen refresh rate, you may need to change the number in line 609/610 (function  "draw_loading_bar")
 
 let raf, raf_bullet, raf_enemy_bullet, function_end = false, alive = true, tank_alive = true, enemy_fire = false, bullet_in_air = false;
 let up = 0, down = 0, left = 0, right = 0, score_num = 0;
